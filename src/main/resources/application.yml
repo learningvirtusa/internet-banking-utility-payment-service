@@ -1,0 +1,22 @@
+server:
+  port: 9097
+
+spring:
+  application:
+    name: internet-banking-utility-payment-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/banking_core_utility_payment_service
+    username: root
+    password: Welcome@#123!
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9091/eureka
+
+info:
+  app:
+    name: ${spring.application.name}
